@@ -9,7 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let paises = ColeccionDePaises()
+    let hamburguesas = ColeccionDeHamburguesas()
 
+    @IBOutlet weak var labelPais: UILabel!
+    @IBOutlet weak var labelHamburguesa: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +26,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func btnHamburguesa() {
+        labelPais.text = paises.obtenPais()
+        labelHamburguesa.text = hamburguesas.obtenHamburguesa()
+    }
 
 }
 
